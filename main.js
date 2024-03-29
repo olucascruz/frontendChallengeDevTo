@@ -21,12 +21,11 @@ for (let index = 0; index < 20; index++) {
     element.style.borderRadius = `50%`
     element.classList.add("particle")   
     
-    const timeAnimation = getRandomNumber(6, 10); // Duração aleatória entre 3 e 8 segundos
+    const timeAnimation = getRandomNumber(6, 10); // random duration between 3 and 8 seconds
     element.style.animationDuration = `${timeAnimation}s`;
 
     particles.push(element)
 }
-
 
 form.addEventListener("submit", e =>{
     e.preventDefault()
@@ -39,23 +38,3 @@ form.addEventListener("submit", e =>{
     p.style.marginTop = "10%"
     p.innerHTML="Your form has been sent"
 })
-
-
-// Função para mover os objetos
-function moverObjetos() {
-    particles.forEach((particle, index) => {
-        const destinoY = 500; // Substitua pelos valores desejados
-
-        // Aplicar a transformação
-        particle.style.transition = "transform 1s ease-in-out";
-        particle.style.transform = `translateY(${destinoY}px)`;
-
-        // Aplicar a transformação de volta após um atraso
-        setTimeout(() => {
-            particle.style.transform = "translateY(0)";
-        }, 2000); // Tempo de atraso para voltar (por exemplo, 2 segundos)
-    });
-}
-
-// Chamando a função para mover os objetos após um certo tempo (por exemplo, 3 segundos)
-// setInterval(moverObjetos, 1000);
