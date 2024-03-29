@@ -28,3 +28,10 @@ Use CSS and JavaScript to make the below HTML markup beautiful, interactive, and
     </form>
 </section>
 ```
+
+## Result
+
+<video width="320" height="240" controls>
+  <source src="assets\frontendChallenge.mp4" type="video/mp4">
+  Seu navegador não suporta a reprodução do vídeo.
+</video>
