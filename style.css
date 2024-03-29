@@ -1,0 +1,169 @@
+*{
+margin: 0;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+label{
+    margin-bottom: 10px;
+}
+section{
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ color: aliceblue;
+}
+
+form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(purple, rgba(128, 0, 128, 0.24));
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 2;
+    }
+
+form:hover{
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.5);
+
+}
+
+button{
+    background-color: blueviolet;
+    border-radius: 10%;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    color: white;
+}
+
+button:hover{
+    background-color:purple;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.5);
+}
+
+select{
+    height: 40px;
+}
+
+
+label{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.particles{
+    height:90vh;
+}
+.particle{
+    background-color:rgba(240, 255, 255, 0.781);
+    width:5px;
+    height: 5px;
+    position: relative;
+    animation: mover 3s infinite, brilho 2s infinite;
+    z-index: 1; 
+}
+
+
+@keyframes mover {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-50px) translateX(50px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(0) translateX(100px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(50px) translateX(50px) rotate(270deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(360deg);
+    }
+}
+
+
+@keyframes brilho {
+    0% {
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+/* Estilos para telas com largura máxima de 600 pixels */
+@media screen and (max-width: 650px) {
+    /* Estilos para telas pequenas, como dispositivos móveis */
+    body {
+      font-size: 14px;  
+    }
+
+    form{
+        height: 80vh;
+        width: 100%;
+        border-radius: 60px;
+        padding-top: 20px;
+        margin-top: 2rem;
+        margin-left: -10%;
+    }
+
+    section{
+        width: 100%; 
+        position: absolute;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        right: auto;
+        left: 0;
+    }
+
+    .particles{
+        width:100%;
+    }
+
+  }
+  
+  /* Estilos para telas maiores que 600 pixels */
+  @media screen and (min-width: 651px) {
+    /* Estilos para telas grandes, como desktops */
+    body {
+      font-size: 16px;
+      display: flex;
+      text-align: center;
+    }
+
+    section{
+        width: 40%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+     
+    form{
+        height: 75%;
+        margin-left: -20px;
+        margin-right: auto;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        margin-top: 5rem;
+    }
+
+    .particles{
+        width:60%;
+    }
+  }
